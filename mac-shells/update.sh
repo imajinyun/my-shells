@@ -17,7 +17,7 @@ if [[ $# -eq 0 ]]; then
     declare -a orders
 
     groups=(
-        [composer-update]="$(which composer) self-update"
+        [composer-version]="$(which composer) --version"
         [composer-global-update]="$(which composer) global update"
         [symfony-update]="$(which symfony) self-update"
         [phalcon-devtools-update]="`cd $HOME/.phalcon-devtools && git pull && cd ~`"
@@ -36,7 +36,7 @@ if [[ $# -eq 0 ]]; then
     )
 
     orders=(
-        "composer-update"
+        "composer-version"
         "composer-global-update"
         "symfony-update"
         "phalcon-devtools-update"
