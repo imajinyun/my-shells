@@ -73,7 +73,7 @@ if [[ $# -eq 0 ]]; then
         elif [ $key == "gem-update" ]; then
             echo -e "\n\033[1;$random;7m $key: \033[0m" "sudo gem update $val" && sudo gem update $val
         else
-            echo -e "\n\033[1;$random;7m $key: \033[0m" $val #&& $val
+            echo -e "\n\033[1;$random;7m $key: \033[0m" $val && $val
         fi
     done
 fi
