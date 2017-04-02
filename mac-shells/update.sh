@@ -20,7 +20,6 @@ if [[ $# -eq 0 ]]; then
         [composer-version]="$(which composer) --version"
         [composer-global-update]="$(which composer) global update"
         [symfony-update]="$(which symfony) self-update"
-        [phalcon-devtools-update]="`cd $HOME/.phalcon-devtools && git pull && cd ~`"
         [phpunit-version]="$(which phpunit) --check-version"
         [brew-doctor]="$(which brew) doctor"
         [brew-prune]="$(which brew) prune"
@@ -39,7 +38,6 @@ if [[ $# -eq 0 ]]; then
         "composer-version"
         "composer-global-update"
         "symfony-update"
-        "phalcon-devtools-update"
         "phpunit-version"
         "brew-doctor"
         "brew-prune"
@@ -68,8 +66,6 @@ if [[ $# -eq 0 ]]; then
             else
                 echo -e "\n\033[1;$random;7m $key: \033[0m" $val && $val
             fi
-        elif [ $key == "phalcon-devtools-update" ]; then
-            echo -e "\n\033[1;$random;7m $key: \033[0m" $val
         elif [ $key == "gem-update" ]; then
             echo -e "\n\033[1;$random;7m $key: \033[0m" "sudo gem update $val" && sudo gem update $val
         else
