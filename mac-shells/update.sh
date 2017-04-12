@@ -22,8 +22,6 @@ if [[ $# -eq 0 ]]; then
         [symfony-update]="$(which symfony) self-update"
         [atom-update]="$(which apm) update"
         [phpunit-version]="$(which phpunit) --check-version"
-        [brew-doctor]="$(which brew) doctor"
-        [brew-prune]="$(which brew) prune"
         [brew-update]="$(which brew) update"
         [autojump-purge]="$(which autojump) --purge"
         [gitbook-update]="$(which gitbook) update"
@@ -41,8 +39,6 @@ if [[ $# -eq 0 ]]; then
         "symfony-update"
         "atom-update"
         "phpunit-version"
-        "brew-doctor"
-        "brew-prune"
         "brew-update"
         "autojump-purge"
         "gitbook-update"
@@ -68,6 +64,13 @@ if [[ $# -eq 0 ]]; then
             else
                 echo -e "\n\033[1;$random;7m $key: \033[0m" $val && $val
             fi
+        elif [ $key == "brew-update" ]; then
+            brew=$(which brew)
+            $brew doctor
+            $brew prune
+            echo -e "\n\033[1;$random;7m $key: \033[0m" $val && $val
+            $brew upgrade
+            $brew cleanup
         elif [ $key == "gem-update" ]; then
             echo -e "\n\033[1;$random;7m $key: \033[0m" "sudo gem update $val" && sudo gem update $val
         else
