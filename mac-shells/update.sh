@@ -19,7 +19,7 @@ if [[ $# -eq 0 ]]; then
     groups=(
         [composer-version]="$(which composer) --version"
         [composer-global-update]="$(which composer) global update"
-        [symfony-update]="$(which symfony) self-update"
+        [symfony-update]="$(which symfony) self-update -f"
         [atom-update]="$(which apm) update"
         [phpunit-version]="$(which phpunit) --check-version"
         [brew-update]="$(which brew) update"
