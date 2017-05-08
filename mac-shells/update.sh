@@ -26,7 +26,7 @@ if [[ $# -eq 0 ]]; then
         [autojump-purge]="$(which autojump) --purge"
         [gitbook-update]="$(which gitbook) update"
         [npm-outdated]="$(which npm) outdated -g --depth=0"
-        [npm-global-update]="sudo $(which npm) update -g"
+        [npm-global-update]="$(which npm) update -g"
         [gem-global-update]="sudo $(which gem) update --system"
         [gem-update]="`gem outdated | cut -d ' ' -f 1`"
         [vim-update]="vim +BundleUpdate +qal"
