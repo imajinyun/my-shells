@@ -29,6 +29,8 @@ if [[ $# -eq 0 ]]; then
         [php-switcher-install]="$brew install brew-php-switcher"
         [php-install]="$brew install php70"
         [nginx-install]="$brew install nginx"
+        [nvm-install]="$brew install nvm"
+        [yarn-install]="$brew install yarn"
         [util]="$brew install unrar archey wget bash git curl sl htop tree autojump"
         [xmind]="$cask install xmind"
     )
@@ -42,6 +44,8 @@ if [[ $# -eq 0 ]]; then
         "php-switcher-install"
         "php-install"
         "nginx-install"
+        "nvm-install"
+        "yarn-install"
         "util"
         "xmind"
     )
@@ -56,4 +60,3 @@ if [[ $# -eq 0 ]]; then
         echo -e "\n\033[1;$random;7m $key: \033[0m" $val # && $val
     done
 fi
-
