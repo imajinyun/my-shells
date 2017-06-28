@@ -54,4 +54,3 @@ if [[ $# -eq 0 ]]; then
     echo -e "\n" $C_YELLOW "${S_YELLOW}Install autojump: ${E_YELLOW}" $myAutojump
     $myTools
 fi
-

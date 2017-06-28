@@ -70,4 +70,3 @@ then
     disk_usages=$(df -hP | grep -vE 'Filesystem|tmpfs' | awk '{print $1 " " $5}')
     echo -e "\e[1;33m[]" "Disk usages:" $terminal $disk_usages
 fi
-
