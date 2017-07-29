@@ -3,8 +3,13 @@
 # Check if an element is in an array.
 #
 # @file   contains.sh
+<<<<<<< HEAD
 # @date   2017-07-29 18:01
 # @link   https://stackoverflow.com/questions/3685970/check-if-a-bash-array-contains-a-value
+=======
+# @author majinyun <imajinyun@gmail.com>
+# @date   2017-07-29 18:01
+>>>>>>> origin/master
 ###############################################################################
 
 function contains() {
