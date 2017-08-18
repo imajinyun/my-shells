@@ -59,7 +59,7 @@ if [[ $# -eq 0 ]]; then
 
         if [ $key == "gitbook-update" ]; then
             gitbook_version=`gitbook ls-remote | grep latest | awk '{print $3}'`
-            if [ $gitbook_version == '3.2.2' ]; then
+            if [ $gitbook_version == '3.2.3' ]; then
                 echo -e "\n\033[1;$random;7m $key: \033[0m" "no new version\n" && $(which gitbook) --version
             else
                 echo -e "\n\033[1;$random;7m $key: \033[0m" $val && $val
